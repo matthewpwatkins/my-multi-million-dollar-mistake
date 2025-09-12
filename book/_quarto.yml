@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "My multi-million dollar mistake"
+  subtitle: "What I wish I knew about finances as a young adult"
+  author: "Your Name"
+  date: "2025"
+  chapters:
+    - chapters/00-title-and-contents.md
+    - chapters/01-why-im-writing-this.md
+    - chapters/02-eighth-wonder-of-the-world.md
+    - chapters/03-millionaire-of-time.md
+    - chapters/04-financial-success-plan.md
+    - chapters/05-how-to-get-started.md
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+  pdf:
+    documentclass: scrreprt
+    toc: true
+  epub:
+    toc: true
