@@ -26,17 +26,14 @@ jobs:
       - name: Create output directory
         run: mkdir -p output
 
-      - name: Build HTML and EPUB with Pandoc
-        run: bash scripts/build-pandoc.sh
+      - name: Build web version and legacy formats
+        run: bash scripts/build-web.sh
 
-      - name: Rename book.html to index.html for GitHub Pages
-        run: mv output/book.html output/index.html
-
-      - name: Deploy output/ to GitHub Pages
+      - name: Deploy web version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          publish_dir: ./output/web
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
