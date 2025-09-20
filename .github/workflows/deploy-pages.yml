@@ -29,6 +29,9 @@ jobs:
       - name: Build HTML and EPUB with Pandoc
         run: bash scripts/build-pandoc.sh
 
+      - name: Rename book.html to index.html for GitHub Pages
+        run: mv output/book.html output/index.html
+
       - name: Deploy output/ to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
